@@ -1,3 +1,4 @@
+const cors = require('cors');
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
@@ -23,6 +24,7 @@ mongoose
 
 const PORT = process.env.PORT || 5000;
 
+app.use(cors({ origin: true }));
 // app.use(restrictOrigin);
 app.use(express.json());
 
