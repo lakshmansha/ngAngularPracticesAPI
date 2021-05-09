@@ -23,7 +23,7 @@ mongoose
 
 const PORT = process.env.PORT || 5000;
 
-app.use(restrictOrigin);
+// app.use(restrictOrigin);
 app.use(express.json());
 
 app.post("/ping", (req, res) => {
