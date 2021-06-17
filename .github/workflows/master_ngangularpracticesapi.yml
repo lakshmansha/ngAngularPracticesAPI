@@ -4,6 +4,12 @@
 name: Azure App Service - ngangularpracticesapi(Production), Build and deploy NodeJS app
 
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
   push:
     branches:
       - master
